@@ -1,3 +1,5 @@
+
+
 (config
  (text-field
   :name "clientId" ; name is fixed
@@ -41,5 +43,6 @@
         (api-docs-url "https://developer.paychex.com/documentation#tag/Company")
         (source (http/get :url "/companies")
                 (extract-path "content")
+                (query-params "displayid" {"displayid"})
                 ) 
         )
